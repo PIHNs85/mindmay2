@@ -11,8 +11,7 @@ import FocusChallenge from '@/components/FocusChallenge';
 import SimonPattern from "@/components/SimonPattern";
 import AdvancedColorMemory from '@/components/AdvancedColorMemory';
 import AlphabetOrderChallenge from '@/components/AlphabetOrderChallenge';
-import EmojiSequenceMemory from '@/components/EmojiSequenceMemory';
-import WordleExtractGame from "@/components/WordleExtractGame";
+import Wordle5Letter from '@/components/Wordle5Letter';
 import { GameCard } from '@/components/brain-training/GameCard';
 import { CategoryFilter } from '@/components/brain-training/CategoryFilter';
 import { ProgressSection } from '@/components/brain-training/ProgressSection';
@@ -89,24 +88,16 @@ const BrainTraining = () => {
       icon: BookType
     },
     {
-      id: 'emoji-sequence-memory',
-      title: 'Emoji Sequence Memory',
-      description: 'Memorize and recall emoji sequences as the length and palette grow. A tough memory sequence game!',
-      difficulty: 'Hard',
-      category: 'Memory',
-      icon: Smile
-    },
-    {
       id: 'wordle-challenge',
-      title: 'Wordle Challenge (100 Levels)',
-      description: 'Guess the 5-letter word in 6 tries. Harder words and higher stakes as you move through 100 levels!',
+      title: 'Wordle 5-Letter Challenge (50 Levels)',
+      description: 'Guess the 5-letter word in 6 tries! Green = correct position, Yellow = wrong position, Gray = not in word.',
       difficulty: 'Hard',
       category: 'Language',
       icon: Trophy
     },
     {
       id: 'word-maker',
-      title: 'Word Maker',
+      title: 'Word Maker (50 Levels)',
       description: 'Swipe through jumbled letters in a circle to form words and fill crossword-style grids. Find required words and discover bonus words for extra points!',
       difficulty: 'Medium',
       category: 'Language',
@@ -145,10 +136,8 @@ const BrainTraining = () => {
         return <AdvancedColorMemory />;
       case 'alphabet-order-challenge':
         return <AlphabetOrderChallenge />;
-      case 'emoji-sequence-memory':
-        return <EmojiSequenceMemory />;
       case 'wordle-challenge':
-        return <WordleExtractGame />;
+        return <Wordle5Letter />;
       case 'word-maker':
         return <WordMaker />;
       default:
